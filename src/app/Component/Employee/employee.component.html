@@ -1,0 +1,23 @@
+<div class="col-lg-6 col-md-8 col-sm-10 offset-2">
+    <!-- <app-new-employee (onCreateNewEmployee)="createnewEmployee($event)"></app-new-employee> -->
+    <app-new-employee></app-new-employee>
+    <h1>Employee List</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Surname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of (employees$ | async); let i = index;">
+                <td>{{employee.id}}</td>
+                <td>{{employee.first}}</td>
+                <td>{{employee.last}}</td>
+                <td>{{employee.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

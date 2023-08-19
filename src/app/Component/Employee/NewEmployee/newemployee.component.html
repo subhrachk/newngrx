@@ -1,0 +1,18 @@
+<h1>New Employee</h1>
+<form class="table table-striped" (ngSubmit)="createEmployee(f)" #f="ngForm">
+    <div>
+        <label for="firstname">First Name</label>
+        <input name="firstname" id="firstname" [(ngModel)]="first" />
+    </div>
+    <div>
+        <label for="lastname">Surname</label>
+        <input name="lastname" id="lastname" [(ngModel)]="last" />
+    </div>
+    <div>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" [(ngModel)]="age" />
+    </div>
+    <div>
+        <input type="submit" value="Create Employee" />
+    </div>
+</form>
