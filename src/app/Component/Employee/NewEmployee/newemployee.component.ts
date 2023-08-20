@@ -27,7 +27,7 @@ export class NewemployeeComponent {
     }
 
     createEmployee(e:NgForm) {
-        this.store.dispatch(addEmployee(e.value));
+        this.store.dispatch(addEmployee({payload : {first : e.value.firstname, last : e.value.lastname, age : e.value.age}}));
        //this.onCreateNewEmployee.emit(e.value);
        //this.employeeService.addEmployee({first : e.value.firstname, last : e.value.lastname, age : e.value.age});
        this.first = '';
